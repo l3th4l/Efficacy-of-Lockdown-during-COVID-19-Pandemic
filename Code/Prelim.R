@@ -32,7 +32,7 @@ dat_in[c("D.R.A")] = (dat_in$Death / (dat_in$Cured.Discharged + dat_in$Death)) *
 p1 = ggplot(data = dat_in, aes(x=Date, y=D.R.A,)) + geom_line(color = "#E46726", size = 1)
 p2 = ggplot(data = dat_in, aes(x=Date, y=Active.Cases)) + geom_line(color = "#2E9FDF", size = 1)
 
-figure <- ggpubr::ggarrange(p1, p2,
+figure  = ggarrange(p1, p2,
                     labels = c("DRA", "A"),
                     ncol = 1, nrow = 2)
 figure
